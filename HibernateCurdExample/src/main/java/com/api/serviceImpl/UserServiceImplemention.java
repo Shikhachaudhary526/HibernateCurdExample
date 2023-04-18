@@ -14,7 +14,7 @@ import com.api.service.UserService;
 public class UserServiceImplemention implements UserService {
 
 	@Autowired
-	StudentRepository repository;
+	private StudentRepository repository;
 	
 	@Override
 	public String userName(String state) {

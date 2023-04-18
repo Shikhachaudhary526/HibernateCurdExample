@@ -9,12 +9,15 @@ import javax.persistence.Table;
 @Entity
 @Table(name = "Student1")
 public class StudentEntity {
-	private String name;
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Integer id;
-	
+	private String name;
 	private String address;
+	
+	public StudentEntity(){
+		
+	}
 	
 	public String getName() {
 		return name;
@@ -34,6 +37,12 @@ public class StudentEntity {
 	public void setAddress(String address) {
 		this.address = address;
 	}
+	public StudentEntity(Integer id, String name, String address) {
+		this.id = id;
+		this.name = name;
+		this.address = address;
+	}
+	
 	
 	
 
